@@ -1,0 +1,172 @@
+[gd_scene load_steps=26 format=3 uid="uid://cp4qrkc5pik0u"]
+
+[ext_resource type="Script" uid="uid://dxrp4picry4ii" path="res://scenes/page_2.gd" id="1_oeifb"]
+[ext_resource type="Texture2D" uid="uid://b8m4wsm7jwe43" path="res://images/paginas/pagina2/Página 2.png" id="2_8fy3i"]
+[ext_resource type="Texture2D" uid="uid://chvk2xs20trxd" path="res://images/paginas/pagina2/visao_positiva/cachorro-abanando-rabo.png" id="3_4jiym"]
+[ext_resource type="Texture2D" uid="uid://b51bi1vtf1fdh" path="res://images/botoes/audio/SOM_LIGADO.png" id="3_oeifb"]
+[ext_resource type="Texture2D" uid="uid://rdwygqidmpt7" path="res://images/botoes/audio/SOM_DESLIGADO.png" id="4_67lvk"]
+[ext_resource type="Texture2D" uid="uid://canctc0034v8x" path="res://images/paginas/pagina2/visao_positiva/criancas-brincando.png" id="4_cfv64"]
+[ext_resource type="Texture2D" uid="uid://c14lrqfggllhb" path="res://images/paginas/pagina2/visao_positiva/passaros.png" id="5_owm6b"]
+[ext_resource type="Texture2D" uid="uid://2ip5yli5f1e4" path="res://images/botoes/navegacao/Posterior.png" id="5_vnkyw"]
+[ext_resource type="Texture2D" uid="uid://dqxc6cmoa613r" path="res://images/paginas/pagina2/visao_positiva/mais-passaros.png" id="6_8hh8i"]
+[ext_resource type="Texture2D" uid="uid://bbwxjdogi2eao" path="res://images/botoes/navegacao/Posterior_Pressed.png" id="6_kqbl7"]
+[ext_resource type="Texture2D" uid="uid://ci7l3g8g72n0d" path="res://images/botoes/navegacao/Anterior.png" id="7_0iyv4"]
+[ext_resource type="Texture2D" uid="uid://bd6to0708rlbc" path="res://images/paginas/pagina2/visao_positiva/casal-sorrindo.png" id="7_virtl"]
+[ext_resource type="Texture2D" uid="uid://ys3a60rhi5an" path="res://images/botoes/navegacao/Anterior_Pressed.png" id="8_8tao5"]
+[ext_resource type="Texture2D" uid="uid://syv5isrr5d7q" path="res://images/paginas/pagina2/visao_negatva/cachorro-cagando.png" id="8_hym81"]
+[ext_resource type="Texture2D" uid="uid://cus2pn6ghclpr" path="res://images/paginas/pagina2/visao_negatva/criancas-brigando.png" id="9_djny5"]
+[ext_resource type="Texture2D" uid="uid://banurjekvaegk" path="res://images/paginas/pagina2/visao_negatva/casal-discutindo.png" id="10_f4dic"]
+[ext_resource type="Texture2D" uid="uid://r61a5ip60iyw" path="res://images/paginas/pagina2/visao_negatva/velha-caindo-2.png" id="11_jqdhe"]
+[ext_resource type="Texture2D" uid="uid://qseob532ylgp" path="res://images/paginas/pagina2/visao_negatva/velha-no-chao.png" id="12_meeln"]
+[ext_resource type="Texture2D" uid="uid://qnu8excb1aag" path="res://images/paginas/pagina2/visor-verde.png" id="13_78stk"]
+[ext_resource type="Texture2D" uid="uid://mafyncy0lwqa" path="res://images/paginas/pagina2/visor-vermelho.png" id="14_wbgmo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26cug"]
+size = Vector2(113, 363)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aww3t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4jiym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cfv64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_owm6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8hh8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_virtl")
+}],
+"loop": true,
+"name": &"play",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_excql"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_hym81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_djny5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f4dic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jqdhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_meeln")
+}],
+"loop": true,
+"name": &"play",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vj8l"]
+size = Vector2(367.5, 362)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44bbq"]
+size = Vector2(367, 365.5)
+
+[node name="Page2" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_oeifb")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("2_8fy3i")
+
+[node name="DropZone" type="Area2D" parent="."]
+position = Vector2(383, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropZone"]
+position = Vector2(2.5, -5)
+shape = SubResource("RectangleShape2D_26cug")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="AnimPositiva" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(384, 193)
+scale = Vector2(0.36, 0.36)
+sprite_frames = SubResource("SpriteFrames_aww3t")
+animation = &"play"
+speed_scale = 0.5
+
+[node name="AnimNegatva" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(388, 191)
+scale = Vector2(0.36, 0.36)
+sprite_frames = SubResource("SpriteFrames_excql")
+animation = &"play"
+speed_scale = 0.5
+
+[node name="VisorVerde" type="Area2D" parent="."]
+position = Vector2(853, 201)
+
+[node name="SpriteVisorVerde" type="Sprite2D" parent="VisorVerde"]
+position = Vector2(-1, -1)
+texture = ExtResource("13_78stk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisorVerde"]
+position = Vector2(3, -5)
+shape = SubResource("RectangleShape2D_2vj8l")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="VisorVermelho" type="Area2D" parent="."]
+position = Vector2(-79, 196)
+
+[node name="SpriteVisorVermelho" type="Sprite2D" parent="VisorVermelho"]
+position = Vector2(1, -1)
+texture = ExtResource("14_wbgmo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisorVermelho"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_44bbq")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="ButtonAudioON" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 654.0
+offset_top = 511.0
+offset_right = 740.0
+offset_bottom = 604.0
+texture_normal = ExtResource("3_oeifb")
+
+[node name="ButtonAudioOFF" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 654.0
+offset_top = 512.0
+offset_right = 740.0
+offset_bottom = 605.0
+texture_normal = ExtResource("4_67lvk")
+
+[node name="ButtonNext" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 892.0
+offset_right = 731.0
+offset_bottom = 990.0
+texture_normal = ExtResource("5_vnkyw")
+texture_pressed = ExtResource("6_kqbl7")
+
+[node name="ButtonPrevious" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 893.0
+offset_right = 297.0
+offset_bottom = 991.0
+texture_normal = ExtResource("7_0iyv4")
+texture_pressed = ExtResource("8_8tao5")

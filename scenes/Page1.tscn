@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfkvn1u3uhojd"]
+
+[ext_resource type="Script" uid="uid://c2a5r4tn6ipng" path="res://scenes/page_1.gd" id="1_dkeop"]
+[ext_resource type="Texture2D" uid="uid://c4g1c5snqc7e2" path="res://images/paginas/pagina1/Pagina1.png" id="2_dkeop"]
+[ext_resource type="Texture2D" uid="uid://b51bi1vtf1fdh" path="res://images/botoes/audio/SOM_LIGADO.png" id="3_dkeop"]
+[ext_resource type="Texture2D" uid="uid://rdwygqidmpt7" path="res://images/botoes/audio/SOM_DESLIGADO.png" id="4_fxsmn"]
+[ext_resource type="Texture2D" uid="uid://2ip5yli5f1e4" path="res://images/botoes/navegacao/Posterior.png" id="5_cmayc"]
+[ext_resource type="Texture2D" uid="uid://bbwxjdogi2eao" path="res://images/botoes/navegacao/Posterior_Pressed.png" id="6_jklwo"]
+
+[node name="Page1" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dkeop")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 768.0
+offset_bottom = 1024.0
+texture = ExtResource("2_dkeop")
+
+[node name="ButtonAudioON" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 610.0
+offset_top = 140.0
+offset_right = 696.0
+offset_bottom = 233.0
+texture_normal = ExtResource("3_dkeop")
+
+[node name="ButtonAudioOFF" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 609.0
+offset_top = 140.0
+offset_right = 695.0
+offset_bottom = 233.0
+toggle_mode = true
+texture_normal = ExtResource("4_fxsmn")
+
+[node name="ButtonNext" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 892.0
+offset_right = 731.0
+offset_bottom = 990.0
+texture_normal = ExtResource("5_cmayc")
+texture_pressed = ExtResource("6_jklwo")

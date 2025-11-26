@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://40tscmpr84pk"]
+
+[ext_resource type="Script" uid="uid://bi465ryy6i2ri" path="res://SceneManager.gd" id="1_ig7tw"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ig7tw")

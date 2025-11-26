@@ -1,0 +1,143 @@
+[gd_scene load_steps=21 format=3 uid="uid://dgp84y8cu7mf6"]
+
+[ext_resource type="Script" uid="uid://175fpmificu6" path="res://scenes/page_5.gd" id="1_prty7"]
+[ext_resource type="Texture2D" uid="uid://dn8gvpe1n3rrl" path="res://images/paginas/pagina5/Página 5.png" id="2_2esb6"]
+[ext_resource type="Texture2D" uid="uid://dfd0mhn5tyoc" path="res://images/paginas/pagina5/Grupo e-Sports.png" id="3_o1jn4"]
+[ext_resource type="Texture2D" uid="uid://b51bi1vtf1fdh" path="res://images/botoes/audio/SOM_LIGADO.png" id="3_wwud0"]
+[ext_resource type="Texture2D" uid="uid://dsf22kq27cxsu" path="res://images/paginas/pagina5/Grupo Cinema.png" id="4_c5exi"]
+[ext_resource type="Texture2D" uid="uid://rdwygqidmpt7" path="res://images/botoes/audio/SOM_DESLIGADO.png" id="4_u4uf6"]
+[ext_resource type="Texture2D" uid="uid://2ip5yli5f1e4" path="res://images/botoes/navegacao/Posterior.png" id="5_8okn0"]
+[ext_resource type="Texture2D" uid="uid://b3s4icbhfsxg1" path="res://images/paginas/pagina5/Grupo Show.png" id="5_f6bwe"]
+[ext_resource type="Texture2D" uid="uid://bbwxjdogi2eao" path="res://images/botoes/navegacao/Posterior_Pressed.png" id="6_4dmeo"]
+[ext_resource type="Texture2D" uid="uid://tmylur18fe5a" path="res://images/paginas/pagina5/Group Futebol.png" id="6_n5k03"]
+[ext_resource type="Texture2D" uid="uid://ci7l3g8g72n0d" path="res://images/botoes/navegacao/Anterior.png" id="7_u0phr"]
+[ext_resource type="Texture2D" uid="uid://ys3a60rhi5an" path="res://images/botoes/navegacao/Anterior_Pressed.png" id="8_swsxd"]
+[ext_resource type="Texture2D" uid="uid://clpml4v1reepg" path="res://images/paginas/pagina5/Cinema_inicio.png" id="13_n5k03"]
+[ext_resource type="Texture2D" uid="uid://dxjpn0x6snl17" path="res://images/paginas/pagina5/Cinema_pressed.png" id="14_yraos"]
+[ext_resource type="Texture2D" uid="uid://do7n2nfn5wgef" path="res://images/paginas/pagina5/e-Sports_inicio.png" id="15_8fg24"]
+[ext_resource type="Texture2D" uid="uid://c4woih8vi00mx" path="res://images/paginas/pagina5/e-Sports_pressed.png" id="16_0ocu1"]
+[ext_resource type="Texture2D" uid="uid://npkms82dn4t7" path="res://images/paginas/pagina5/Show_inicio.png" id="17_d2prl"]
+[ext_resource type="Texture2D" uid="uid://ctw1ej0qucs" path="res://images/paginas/pagina5/Show_pressed.png" id="18_mlnl2"]
+[ext_resource type="Texture2D" uid="uid://bsahx7o7o13" path="res://images/paginas/pagina5/Futebol_inicio.png" id="19_e6ypj"]
+[ext_resource type="Texture2D" uid="uid://bohku62gxe8nh" path="res://images/paginas/pagina5/Futebol_pressed.png" id="20_0hftj"]
+
+[node name="Page5" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_prty7")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_2esb6")
+
+[node name="ButtonAudioON" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 481.0
+offset_right = 738.0
+offset_bottom = 574.0
+texture_normal = ExtResource("3_wwud0")
+
+[node name="ButtonAudioOFF" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 654.0
+offset_top = 482.0
+offset_right = 740.0
+offset_bottom = 575.0
+texture_normal = ExtResource("4_u4uf6")
+
+[node name="ButtonNext" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 892.0
+offset_right = 731.0
+offset_bottom = 990.0
+texture_normal = ExtResource("5_8okn0")
+texture_pressed = ExtResource("6_4dmeo")
+
+[node name="ButtonPrevious" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 893.0
+offset_right = 297.0
+offset_bottom = 991.0
+texture_normal = ExtResource("7_u0phr")
+texture_pressed = ExtResource("8_swsxd")
+
+[node name="Cinema" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 218.0
+offset_right = 768.0
+offset_bottom = 415.0
+toggle_mode = true
+texture_normal = ExtResource("13_n5k03")
+texture_pressed = ExtResource("14_yraos")
+texture_disabled = ExtResource("14_yraos")
+
+[node name="Jogo" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 2.0
+offset_right = 768.0
+offset_bottom = 200.0
+toggle_mode = true
+texture_normal = ExtResource("15_8fg24")
+texture_pressed = ExtResource("16_0ocu1")
+texture_disabled = ExtResource("16_0ocu1")
+
+[node name="Show" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 168.0
+offset_bottom = 198.0
+toggle_mode = true
+texture_normal = ExtResource("17_d2prl")
+texture_pressed = ExtResource("18_mlnl2")
+texture_disabled = ExtResource("18_mlnl2")
+
+[node name="Futebol" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 220.0
+offset_right = 167.0
+offset_bottom = 422.0
+toggle_mode = true
+texture_normal = ExtResource("19_e6ypj")
+texture_pressed = ExtResource("20_0hftj")
+texture_disabled = ExtResource("20_0hftj")
+
+[node name="Grupo-Jogo" type="Sprite2D" parent="."]
+position = Vector2(379, 173)
+scale = Vector2(0.678, 0.678)
+texture = ExtResource("3_o1jn4")
+
+[node name="Grupo-Cinema" type="Sprite2D" parent="."]
+position = Vector2(423, 202)
+scale = Vector2(0.678082, 0.678082)
+texture = ExtResource("4_c5exi")
+
+[node name="Grupo-Show" type="Sprite2D" parent="."]
+position = Vector2(320, 184)
+scale = Vector2(0.678, 0.678)
+texture = ExtResource("5_f6bwe")
+
+[node name="Grupo-Futebol" type="Sprite2D" parent="."]
+position = Vector2(341, 244)
+scale = Vector2(0.678, 0.678)
+texture = ExtResource("6_n5k03")
+
+[node name="AlvoJogo" type="Marker2D" parent="."]
+position = Vector2(711, 100)
+
+[node name="AlvoCinema" type="Marker2D" parent="."]
+position = Vector2(720, 302)
+
+[node name="AlvoShow" type="Marker2D" parent="."]
+position = Vector2(43, 87)
+
+[node name="AlvoFutebol" type="Marker2D" parent="."]
+position = Vector2(45, 302)

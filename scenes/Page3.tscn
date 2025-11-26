@@ -1,0 +1,103 @@
+[gd_scene load_steps=16 format=3 uid="uid://f63007lmnust"]
+
+[ext_resource type="Script" uid="uid://davtyw40uwq6f" path="res://scenes/page_3.gd" id="1_pm6d4"]
+[ext_resource type="Texture2D" uid="uid://orml0kpidefm" path="res://images/paginas/pagina3/Página 3.png" id="2_f0ulb"]
+[ext_resource type="Texture2D" uid="uid://b51bi1vtf1fdh" path="res://images/botoes/audio/SOM_LIGADO.png" id="3_3wmq7"]
+[ext_resource type="Texture2D" uid="uid://rdwygqidmpt7" path="res://images/botoes/audio/SOM_DESLIGADO.png" id="4_pm6d4"]
+[ext_resource type="Texture2D" uid="uid://2ip5yli5f1e4" path="res://images/botoes/navegacao/Posterior.png" id="5_8ntfw"]
+[ext_resource type="Texture2D" uid="uid://bbwxjdogi2eao" path="res://images/botoes/navegacao/Posterior_Pressed.png" id="6_kadfp"]
+[ext_resource type="Texture2D" uid="uid://ci7l3g8g72n0d" path="res://images/botoes/navegacao/Anterior.png" id="7_pm6d4"]
+[ext_resource type="Texture2D" uid="uid://ys3a60rhi5an" path="res://images/botoes/navegacao/Anterior_Pressed.png" id="8_8ntfw"]
+[ext_resource type="Texture2D" uid="uid://ocrjafcw8i24" path="res://images/paginas/pagina3/válvula-sem-fundo.png" id="9_kadfp"]
+[ext_resource type="Texture2D" uid="uid://dlnypy3273i0a" path="res://images/paginas/pagina3/Fundo1.png" id="10_f0ulb"]
+[ext_resource type="Texture2D" uid="uid://cxftyswp8wcdl" path="res://images/paginas/pagina3/Fundo2.png" id="11_vke51"]
+[ext_resource type="Texture2D" uid="uid://kwil2lnrd014" path="res://images/paginas/pagina3/Fundo3.png" id="12_gxb5j"]
+[ext_resource type="Texture2D" uid="uid://ho2qruwrvgrc" path="res://images/paginas/pagina3/Fundo4.png" id="13_472sb"]
+[ext_resource type="Texture2D" uid="uid://l3l37emg8qoh" path="res://images/paginas/pagina3/Fundo5.png" id="14_qdaki"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_visb8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_f0ulb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vke51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gxb5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_472sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qdaki")
+}],
+"loop": true,
+"name": &"girar_valvula",
+"speed": 5.0
+}]
+
+[node name="Page3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pm6d4")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_f0ulb")
+
+[node name="ButtonAudioON" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 464.0
+offset_right = 739.0
+offset_bottom = 557.0
+texture_normal = ExtResource("3_3wmq7")
+
+[node name="ButtonAudioOFF" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 651.0
+offset_top = 463.0
+offset_right = 737.0
+offset_bottom = 556.0
+texture_normal = ExtResource("4_pm6d4")
+
+[node name="ButtonNext" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 892.0
+offset_right = 731.0
+offset_bottom = 990.0
+texture_normal = ExtResource("5_8ntfw")
+texture_pressed = ExtResource("6_kadfp")
+
+[node name="ButtonPrevious" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 893.0
+offset_right = 298.0
+offset_bottom = 991.0
+texture_normal = ExtResource("7_pm6d4")
+texture_pressed = ExtResource("8_8ntfw")
+
+[node name="Fundos" type="AnimatedSprite2D" parent="."]
+position = Vector2(383, 194)
+sprite_frames = SubResource("SpriteFrames_visb8")
+animation = &"girar_valvula"
+speed_scale = 0.5
+
+[node name="ButtonValvula" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 122.0
+offset_top = -34.0
+offset_right = 622.0
+offset_bottom = 466.0
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(250, 250)
+texture_normal = ExtResource("9_kadfp")
+
+[connection signal="gui_input" from="ButtonValvula" to="." method="_on_button_valvula_gui_input"]

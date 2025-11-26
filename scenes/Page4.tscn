@@ -1,0 +1,194 @@
+[gd_scene load_steps=26 format=3 uid="uid://bqbr3px0opq5n"]
+
+[ext_resource type="Script" uid="uid://qtxjrfu8a1nt" path="res://scenes/page_4.gd" id="1_4xcur"]
+[ext_resource type="Texture2D" uid="uid://c6ohdms1ajghp" path="res://images/paginas/pagina4/Página 4.png" id="2_lyxht"]
+[ext_resource type="Texture2D" uid="uid://b51bi1vtf1fdh" path="res://images/botoes/audio/SOM_LIGADO.png" id="3_8uqla"]
+[ext_resource type="Texture2D" uid="uid://rdwygqidmpt7" path="res://images/botoes/audio/SOM_DESLIGADO.png" id="4_46730"]
+[ext_resource type="Texture2D" uid="uid://2ip5yli5f1e4" path="res://images/botoes/navegacao/Posterior.png" id="5_7kf28"]
+[ext_resource type="Texture2D" uid="uid://bbwxjdogi2eao" path="res://images/botoes/navegacao/Posterior_Pressed.png" id="6_q5uls"]
+[ext_resource type="Texture2D" uid="uid://ci7l3g8g72n0d" path="res://images/botoes/navegacao/Anterior.png" id="7_db3gi"]
+[ext_resource type="Texture2D" uid="uid://ys3a60rhi5an" path="res://images/botoes/navegacao/Anterior_Pressed.png" id="8_lyxht"]
+[ext_resource type="Texture2D" uid="uid://djdn6h5hotpkg" path="res://images/paginas/pagina4/imagem-igreja.png" id="10_s6182"]
+[ext_resource type="Texture2D" uid="uid://bm36b05n5fw4y" path="res://images/paginas/pagina4/imagem-midias.png" id="11_puuqb"]
+[ext_resource type="Texture2D" uid="uid://dqosysrk6bwdq" path="res://images/paginas/pagina4/imagem-industria.png" id="12_nqt0g"]
+[ext_resource type="Texture2D" uid="uid://efeqg2i0rtrm" path="res://images/paginas/pagina4/indigena1.png" id="13_kg7ow"]
+[ext_resource type="Texture2D" uid="uid://bgqr5hutqh71e" path="res://images/paginas/pagina4/indigena2.png" id="14_gi6bo"]
+[ext_resource type="Texture2D" uid="uid://6qwgm0k8xsiw" path="res://images/paginas/pagina4/indigena3.png" id="15_0waj0"]
+[ext_resource type="Texture2D" uid="uid://4w1x318tpumf" path="res://images/paginas/pagina4/toca.png" id="16_7mpsa"]
+[ext_resource type="Texture2D" uid="uid://br7xpj81t4han" path="res://images/paginas/pagina4/Cruz.png" id="17_0waj0"]
+[ext_resource type="Texture2D" uid="uid://cwka4xg4ewxar" path="res://images/paginas/pagina4/Dinheiro.png" id="18_7mpsa"]
+[ext_resource type="Texture2D" uid="uid://cuuli5o74fgiy" path="res://images/paginas/pagina4/TV.png" id="20_s6182"]
+[ext_resource type="Texture2D" uid="uid://byna76tkm0pi" path="res://images/paginas/pagina4/nome-igreja.png" id="21_ap21g"]
+[ext_resource type="Texture2D" uid="uid://b7fo61auax17k" path="res://images/paginas/pagina4/nome-industria.png" id="22_h8ex8"]
+[ext_resource type="Texture2D" uid="uid://s00m4i44cvkm" path="res://images/paginas/pagina4/homem_moderno_sem_fundo 1.png" id="22_nqt0g"]
+[ext_resource type="Texture2D" uid="uid://dw6hov3hpi25n" path="res://images/paginas/pagina4/homem_religioso_sem_fundo 1.png" id="23_ap21g"]
+[ext_resource type="Texture2D" uid="uid://bu4aboij1aopp" path="res://images/paginas/pagina4/nome-midias.png" id="23_qg18j"]
+[ext_resource type="Texture2D" uid="uid://cv0rw1ghewuni" path="res://images/paginas/pagina4/mulher_dinheiro_sem_fundo 1.png" id="24_h8ex8"]
+[ext_resource type="Texture2D" uid="uid://c7r35y8gcbq4d" path="res://images/paginas/pagina4/predio_sem_fundo 1.png" id="25_qg18j"]
+
+[node name="Page4" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4xcur")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 768.0
+offset_bottom = 1024.0
+pivot_offset = Vector2(881, -34)
+texture = ExtResource("2_lyxht")
+
+[node name="ButtonAudioON" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 655.0
+offset_top = 508.0
+offset_right = 741.0
+offset_bottom = 601.0
+texture_normal = ExtResource("3_8uqla")
+
+[node name="ButtonAudioOFF" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 655.0
+offset_top = 509.0
+offset_right = 741.0
+offset_bottom = 602.0
+texture_normal = ExtResource("4_46730")
+
+[node name="ButtonNext" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 892.0
+offset_right = 731.0
+offset_bottom = 990.0
+texture_normal = ExtResource("5_7kf28")
+texture_pressed = ExtResource("6_q5uls")
+
+[node name="ButtonPrevious" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 893.0
+offset_right = 298.0
+offset_bottom = 991.0
+texture_normal = ExtResource("7_db3gi")
+texture_pressed = ExtResource("8_lyxht")
+
+[node name="Igreja" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 259.0
+offset_right = 656.0
+offset_bottom = 400.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("10_s6182")
+
+[node name="TV" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 1.0
+offset_right = 639.0
+offset_bottom = 125.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("11_puuqb")
+
+[node name="Industria" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 120.0
+offset_right = 759.0
+offset_bottom = 270.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("12_nqt0g")
+
+[node name="Indigena1" type="Sprite2D" parent="."]
+position = Vector2(174, 280)
+texture = ExtResource("13_kg7ow")
+
+[node name="Cruz" type="Sprite2D" parent="Indigena1"]
+visible = false
+position = Vector2(3, -77)
+texture = ExtResource("17_0waj0")
+
+[node name="Dinheiro" type="Sprite2D" parent="Indigena1"]
+visible = false
+position = Vector2(2, -76)
+texture = ExtResource("18_7mpsa")
+
+[node name="Televisao" type="Sprite2D" parent="Indigena1"]
+visible = false
+position = Vector2(3, -75)
+texture = ExtResource("20_s6182")
+
+[node name="Indigena2" type="Sprite2D" parent="."]
+position = Vector2(233, 281)
+texture = ExtResource("14_gi6bo")
+
+[node name="Cruz" type="Sprite2D" parent="Indigena2"]
+visible = false
+position = Vector2(2.5, -63)
+texture = ExtResource("17_0waj0")
+
+[node name="Dinheiro" type="Sprite2D" parent="Indigena2"]
+visible = false
+position = Vector2(1.5, -62)
+texture = ExtResource("18_7mpsa")
+
+[node name="Televisao" type="Sprite2D" parent="Indigena2"]
+visible = false
+position = Vector2(2.5, -61)
+texture = ExtResource("20_s6182")
+
+[node name="Indigena3" type="Sprite2D" parent="."]
+position = Vector2(302, 280)
+texture = ExtResource("15_0waj0")
+
+[node name="Cruz" type="Sprite2D" parent="Indigena3"]
+visible = false
+position = Vector2(-11.5, -76)
+texture = ExtResource("17_0waj0")
+
+[node name="Dinheiro" type="Sprite2D" parent="Indigena3"]
+visible = false
+position = Vector2(-12.5, -75)
+texture = ExtResource("18_7mpsa")
+
+[node name="Televisao" type="Sprite2D" parent="Indigena3"]
+visible = false
+position = Vector2(-11.5, -74)
+texture = ExtResource("20_s6182")
+
+[node name="Toca" type="Sprite2D" parent="."]
+position = Vector2(68, 275)
+texture = ExtResource("16_7mpsa")
+
+[node name="NomeIgreja" type="Sprite2D" parent="."]
+position = Vector2(649, 363)
+texture = ExtResource("21_ap21g")
+
+[node name="NomeIndustria" type="Sprite2D" parent="."]
+position = Vector2(719, 233)
+texture = ExtResource("22_h8ex8")
+
+[node name="NomeMidias" type="Sprite2D" parent="."]
+position = Vector2(651, 34)
+texture = ExtResource("23_qg18j")
+
+[node name="Moderno1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(293, 281)
+texture = ExtResource("22_nqt0g")
+
+[node name="Moderno2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(234, 281)
+texture = ExtResource("23_ap21g")
+
+[node name="Moderno3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(171, 284)
+texture = ExtResource("24_h8ex8")
+
+[node name="Predio" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(98, 261)
+texture = ExtResource("25_qg18j")
